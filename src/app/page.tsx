@@ -1,5 +1,6 @@
 //https://sujeitoprogramador.com/next-api/?api=game_day
 import { Container } from "@/components/container";
+import { Input } from "@/components/input";
 import { GameProps } from "@/utils/types/game";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +10,8 @@ import { BsArrowRightSquare } from "react-icons/bs";
 async function getDalyGame() {
   try {
     const res = await fetch(
-      `${process.env.NEXT_API_URL}/next-api/?api=game_day`
+      `${process.env.NEXT_API_URL}/next-api/?api=game_day`,
+      { next: { revalidate: 320 } }
     );
 
     return res.json();
@@ -46,6 +48,7 @@ export default async function Home() {
             </div>
           </section>
         </Link>
+        <Input />
       </Container>
     </main>
   );
