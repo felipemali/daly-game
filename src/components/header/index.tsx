@@ -11,7 +11,7 @@ export function Header() {
           <Link href="/">
             <Image
               className="w-full"
-              src="images/logo.svg"
+              src="/images/logo.svg"
               alt="logo do site dalygames"
               quality={100}
               priority
