@@ -45,13 +45,13 @@ env                  # Contém a URL da API e do projeto
 
 ```http
 # Buscar um jogo
-GET /https://sujeitoprogramador.com/next-api/?api=game_day
+GET ${process.env.NEXT_API_URL}/next-api/?api=game_day
 
 # Buscar todos jogos
-GET /https://sujeitoprogramador.com/next-api/?api=games
+GET ${process.env.NEXT_API_URL}/next-api/?api=games
 
 # Buscar um jogo através do título
-GET /https://sujeitoprogramador.com//next-api/?api=game&title=${text}
+GET ${process.env.NEXT_API_URL}/next-api/?api=game&title=${text}
 OBS: A propriedade text é o valor que o usuário digitou no input
 ```
 
