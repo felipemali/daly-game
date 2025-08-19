@@ -1,4 +1,4 @@
-# Daly Games - Salve e acompanhe seus jogos favoritos
+# Daly Games - Acompanhe seus jogos favoritos
 
 Daly Games é um site de jogos onde é possível acompanhar todos detalhes, como data de lançamento, plataformas e categoria do jogo. O site foi desenvolvido utilizando Nextjs, Typescript e TailwindCSS para estilização.
 <br>
