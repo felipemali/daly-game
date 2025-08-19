@@ -37,7 +37,7 @@ env                  # Contém a URL da API e do projeto
 - **Typescript 5** - Linguagem
 - **Next 15.3.2** - Framework
 - **TailwindCSS 4** - Biblioteca de estilização
-- **React-icons 5.5.0** - biblioteca de ícones
+- **React-icons 5.5.0** - Biblioteca de ícones
 
 ## 🚦 Endpoints
 
