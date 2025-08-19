@@ -1,4 +1,5 @@
 //https://sujeitoprogramador.com/next-api/?api=game_day
+import { getDalyGame, getGamesData } from "@/api/game";
 import { Container } from "@/components/container";
 import { GameCard } from "@/components/gameCard";
 import { Input } from "@/components/input";
@@ -8,29 +9,6 @@ import Link from "next/link";
 
 import { BsArrowRightSquare } from "react-icons/bs";
 
-async function getDalyGame() {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_API_URL}/next-api/?api=game_day`,
-      { next: { revalidate: 320 } }
-    );
-
-    return res.json();
-  } catch (err) {
-    throw new Error("Failed to fetch data");
-  }
-}
-async function getGamesData() {
-  try {
-    const res = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=games`, {
-      next: { revalidate: 320 },
-    });
-
-    return res.json();
-  } catch (err) {
-    throw new Error("Failed to fetch data");
-  }
-}
 export default async function Home() {
   const dalyGame: GameProps = await getDalyGame();
   const data: GameProps[] = await getGamesData();
